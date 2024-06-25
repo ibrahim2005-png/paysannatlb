@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Library PaysannatLB</title>
+<style type="text/css">
+     .top{width: 100%;
+height: 100px;
+position:fixed;
+overflow: auto;
+top: 0;
+background: rgba(255, 255, 0,0.9);
+box-shadow: 2px 2px 20px 2px black} 
+a{
+     text-decoration: none;
+     color: rgb(0, 255, 255);
+}  
+button{
+     margin: 5px;
+} 
+button:hover{
+     color: red;
+}
+
+body{
+
+     border: none;
+     margin: 0;
+     padding: 0;
+} 
+</style>
+</head>
+<body>
+<div class="top"><p style="position: fixed; font-size:30px; color:rgb(0, 255, 255); font-weight:bold; width:100%; text-align: center;">Welcome to paysannat LB</p>
+     <button style="font-size: 20px; background:rgba(0, 0, 0, 0.3); color:rgb(0,255,255); margin-top: 10px;"><a href="index.html">BACK HOME</a></button>
+<button class="text" ><a href="AboutPtLb.html" >ABOUT</a></button>
+
+</div>
+<center style="position: fixed; left:45%; top:80px;">Library</center>
+<p style="margin-top: 120px;">
+     <button onclick='View("document/Computer Science S4.pdf")'>Computer Science S4.pdf</button>
+     <button onclick='View("document/Computer Science S5.pdf")'>Computer Science S5.pdf</button>
+     <button onclick='View("document/Computer Science S6.pdf")'>Computer Science S6.pdf</button>
+     <button onclick='View("document/Economics S4.pdf")'>Economics S4.pdf</button>
+     <button onclick='View("document/Economics S5.pdf")'>Economics S5.pdf</button>
+     <button onclick='View("document/Economics S6.pdf")'>Economics S6.pdf</button>
+     <button onclick='View("document/Entrepreneurship S4.pdf")'>Entrepreneurship S4.pdf</button>
+     <button onclick='View("document/Entrepreneurship S5.pdf")'>Entrepreneurship S5.pdf</button>
+     <button onclick='View("document/Entrepreneurship S6.pdf")'>Entrepreneurship S6.pdf</button>
+     <button onclick='View("document/Math S4.pdf")'>Math S4.pdf</button>
+	<button onclick='View("document/Math S5.pdf")' >Math S5.pdf</button>
+     <button onclick='View("document/Math S6.pdf")' >Math S6.pdf</button>
+	<button onclick='View("document/GSCSs S4.pdf")' >GSCSs S4.pdf</button>
+	<button onclick='View("document/GSCSs S5.pdf")' >GSCSs S5.pdf</button>
+     <button onclick='View("document/GSCSs S6.pdf")' >GSCSs S6.pdf</button>
+</p>
+<p style="font-family: monospace; font-size: 20px; color: violet; margin-left:40px;">Welcome to paysannat LB library that different books appear!</p>
+<section id="pdfs" style="background: black; height: 100%; width: 100%; position:absolute; left: 0; top:100px; display:none;"><button onclick="document.getElementById('pdfs').style.display='none';" style="color: red; font-weight:bold; font-size:40px; border:none; top:0; position:absolute; background: none;">&times;</button><center><span id="subject">   </span></center>
+       <iframe id="pdf" style="height:100%; aspect-ratio: 4 / 8;" src=""
+            width="100%">
+        </iframe>
+    </section>
+<span style="position:fixed; bottom: 0; right: 0;">@habari WEb Design</span>
+
+    </body>
+	<script type="text/javascript">
+		
+    function View(n) {
+   document.getElementById("pdfs").style.display="block";
+    	document.getElementById("pdf").removeAttribute("src");
+   document.getElementById("pdf").setAttribute("src", n);
+   var m=n.replace("document/", "");
+   
+   document.getElementById("subject").innerHTML="<a style='color:red; text-decoration:underline;' href='"+n+"'>"+"does "+m+" book unavailable to your browser? click here to got it.</a>"
+    }
+    
+
+	</script>
+	</html>
